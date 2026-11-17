@@ -283,10 +283,12 @@ export function HeroSection({ onOpenSearch }: HeroSectionProps) {
             </h1>
           </div>
 
-          <div ref={subFadeRef} className="mt-5 flex flex-col items-center">
-            <p className="max-w-2xl text-balance text-base font-medium leading-[1.35] tracking-[-0.01em] text-[#151717] md:text-[1.85rem]">
-              Christina L. Unruh · Las Vegas residential listings & sales.{' '}
-              <span className="text-[#151717]/55">Winning results for home sellers and buyers.</span>
+          <div ref={subFadeRef} className="mt-6 flex flex-col items-center">
+            <p className="max-w-3xl text-balance text-lg font-semibold leading-[1.3] tracking-[-0.015em] text-white drop-shadow-[0_2px_16px_rgba(15,17,17,0.45)] md:text-[2rem] lg:text-[2.2rem]">
+              Christina L. Unruh · Las Vegas Residential Listings & Sales.{' '}
+              <span className="font-medium text-white/90">
+                Winning results for home sellers and buyers.
+              </span>
             </p>
 
             <div className="mt-8">

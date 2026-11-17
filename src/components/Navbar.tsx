@@ -59,21 +59,21 @@ export function Navbar({ onSelectBuy, onSelectSell, onOpenContact }: NavbarProps
             : 'bg-transparent text-[#151717]'
         }`}
       >
-        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-8 px-6 lg:h-20 lg:px-12">
-          {/* Zone 1: Uploaded Anchor Realty Group Logo */}
+        <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between gap-8 px-6 lg:h-24 lg:px-12">
+          {/* Zone 1: Uploaded Anchor Realty Group Logo (Prominent) */}
           <a
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
               handleNavClick('#hero');
             }}
-            className="flex shrink-0 items-center gap-3 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-4"
+            className="flex shrink-0 items-center gap-3 whitespace-nowrap py-1.5 focus-visible:outline-2 focus-visible:outline-offset-4"
           >
             <SafeImage
               src="/assets/aistudio/image_891cec0b.png"
               alt="Anchor Realty Group — Elite Vegas Agent"
               loading="eager"
-              className="h-11 w-auto object-contain lg:h-13"
+              className="h-14 w-auto object-contain sm:h-16 lg:h-20"
             />
           </a>
 

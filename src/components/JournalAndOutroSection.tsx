@@ -345,11 +345,13 @@ export function JournalAndOutroSection({
             </div>
           </div>
 
-          {/* Full-width Monumental Footer Wordmark */}
+          {/* Full-width Monumental Footer Wordmark & Prominent Logo */}
           <div className="mt-16 border-t border-white/15 pt-10">
-            <div className="flex items-center justify-between gap-4 text-[clamp(2.2rem,8.5vw,7.5rem)] font-bold leading-none tracking-[-0.04em] text-white select-none">
-              <span>ELITE VEGAS AGENT</span>
-              <div className="flex h-[0.78em] w-[0.78em] shrink-0 items-center justify-center rounded-xl bg-white p-2">
+            <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+              <div className="text-[clamp(2.2rem,7.8vw,7rem)] font-bold leading-none tracking-[-0.04em] text-white select-none">
+                ELITE VEGAS AGENT
+              </div>
+              <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl bg-white p-3 shadow-lg sm:h-28 sm:w-28 lg:h-36 lg:w-36 lg:p-4">
                 <SafeImage
                   src="/assets/aistudio/image_891cec0b.png"
                   alt="Anchor Realty Group logo"

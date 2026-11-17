@@ -2,5 +2,7 @@
   "name": "Elite Vegas Agent",
   "description": "Agent-owned luxury real estate brokerage in Las Vegas, Summerlin, and Henderson — editorial property discovery, expert advisory, and neighborhood guides.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

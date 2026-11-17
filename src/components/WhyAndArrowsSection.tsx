@@ -100,7 +100,7 @@ export function WhyAndArrowsSection() {
           className="pointer-events-none absolute inset-x-0 top-0 z-20 h-[44vh] overflow-hidden will-change-transform"
         >
           <SafeImage
-            src={SITE_ASSETS.heroCloudBank}
+            src={SITE_ASSETS.heroSmoke}
             alt=""
             className="h-full w-full rotate-180 object-cover object-bottom opacity-90"
           />
