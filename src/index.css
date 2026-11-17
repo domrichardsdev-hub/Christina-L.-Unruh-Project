@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --font-primary: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --font-secondary: "Lora", Georgia, serif;
+  --ink: #151717;
+  --muted: #5d6363;
+  --subtle: #8c9191;
+  --line: #e6e4df;
+  --paper: #ffffff;
+  --tint: #f6f4f0;
+  --surface-alt: #ededed;
+  --accent: #d92424;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--ink);
+  background-color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-serif-editorial {
+  font-family: var(--font-secondary);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom thin scrollbars inside modals */
+[data-lenis-prevent]::-webkit-scrollbar {
+  width: 6px;
+}
+[data-lenis-prevent]::-webkit-scrollbar-track {
+  background: transparent;
+}
+[data-lenis-prevent]::-webkit-scrollbar-thumb {
+  background: rgba(21, 23, 23, 0.2);
+  border-radius: 3px;
+}
+
+/* Signature chevron mask for Arrows Section */
+.arrow-chevron-mask {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 346 440'%3E%3Cpath fill='%23000' d='M183.98 440 346 220 183.98 0H0l162.02 220L0 440h183.98Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 346 440'%3E%3Cpath fill='%23000' d='M183.98 440 346 220 183.98 0H0l162.02 220L0 440h183.98Z'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* Expanding 3-column grid for Support Beyond Buying and Selling */
+@media (min-width: 1024px) {
+  .features-expanding-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.75rem;
+    transition: grid-template-columns 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .features-expanding-grid:has(.features-card:nth-child(1):hover) {
+    grid-template-columns: 1.24fr 0.88fr 0.88fr;
+  }
+  .features-expanding-grid:has(.features-card:nth-child(2):hover) {
+    grid-template-columns: 0.88fr 1.24fr 0.88fr;
+  }
+  .features-expanding-grid:has(.features-card:nth-child(3):hover) {
+    grid-template-columns: 0.88fr 0.88fr 1.24fr;
+  }
+}
+
+/* Service row clip-path background wipe on hover */
+.service-row-bg {
+  clip-path: inset(100% 0 0 0);
+  opacity: 0;
+  transform: scale(1.06);
+  transition:
+    opacity 0.45s ease,
+    transform 3.5s cubic-bezier(0.5, 1, 0.89, 1),
+    clip-path 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-row:hover .service-row-bg,
+.service-row:focus-visible .service-row-bg {
+  clip-path: inset(0 0 0 0);
+  opacity: 0.42;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
